@@ -21,7 +21,7 @@
   border: thin solid #20264e;
 }
 
-.container .section-main {
+.container.header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -31,7 +31,22 @@
           flex-direction: column;
 }
 
-.container .section-main__area {
+.container.header__items {
+  background-color: red;
+  height: 33.33%;
+}
+
+.container.section-main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.container.section-main__area {
   height: 33.33%;
 }
 /*# sourceMappingURL=style.css.map */

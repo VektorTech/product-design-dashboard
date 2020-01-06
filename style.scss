@@ -19,13 +19,25 @@ $font-col-dim: #959ab9;
     grid-auto-rows: 100%;
     background: linear-gradient(bottom, $gradient-dark, $gradient-light);
 
+    
     & > div {
         &:nth-child(2) {
             border: thin solid $gap-color;
         }
     }
 
-    .section-main {
+    &.header {
+        display: flex;
+        flex-direction: column;
+        // justify-content: space-between;
+
+        &__items {
+            background-color: red;
+            height: 33.33%;
+        }
+    }
+
+    &.section-main {
         display: flex;
         flex-direction: column;
 
