@@ -4,5 +4,36 @@
     box-sizing: border-box;
 }
 
-@media screen and (max-width: 400px){
+$gradient-dark: #22264e;
+$gradient-light: #3b4576;
+$gap-color: #20264e;
+$font-col-light: #fff;
+$font-col: #fbfbfc;
+$font-col-dim: #959ab9;
+
+.container {
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1.3fr 16fr 7fr;
+    grid-auto-rows: 100%;
+    background: linear-gradient(bottom, $gradient-dark, $gradient-light);
+
+    & > div {
+        &:nth-child(2) {
+            border: thin solid $gap-color;
+        }
+    }
+
+    .section-main {
+        display: flex;
+        flex-direction: column;
+
+        &__area {
+            height: 33.33%;
+        }
+    }
 }
+
+// @media screen and (max-width: 400px){
+// }
