@@ -8,14 +8,44 @@
 
     &__area {
         &:first-child {
-            height: 26%;
-            padding: 0 2.5rem;
+            height: 25%;
             display: grid;
             grid-template-columns: repeat(4, 1fr);
             grid-template-rows: repeat(3, 1fr);
-            grid-gap: 2.5rem;
+            grid-gap: $gap_size;
         }
     }
 
     @include card($main);
+
+    &__area {
+        &:nth-child(2) {
+            height: 55%;
+        }
+    }
+
+
+    &__header-2 {
+        color: $font-col-dim;
+        display: flex;
+        flex-direction: row;
+        // justify-content: space-between;
+    }
+
+    &__title-2 {
+        width: 50%;
+
+    }
+
+    // &__controls-2 {
+    // }
+
+    &__nav-2 {
+        list-style: none;
+        // width: 50%;
+    }
+
+    &__items-2 {
+        display: inline;
+    }
 }
