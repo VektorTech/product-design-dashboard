@@ -1,15 +1,15 @@
+@import "./globals";
+@import "./header/header.scss";
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-$gradient-dark: #22264e;
-$gradient-light: #3b4576;
-$gap-color: #20264e;
-$font-col-light: #fff;
-$font-col: #fbfbfc;
-$font-col-dim: #959ab9;
+body {
+    font-size: 10px;
+}
 
 .container {
     width: 100%;
@@ -17,27 +17,15 @@ $font-col-dim: #959ab9;
     display: grid;
     grid-template-columns: 1.3fr 16fr 7fr;
     grid-auto-rows: 100%;
-    background: linear-gradient(bottom, $gradient-dark, $gradient-light);
-
     
     & > div {
         &:nth-child(2) {
             border: thin solid $gap-color;
+            box-shadow: 0px 0px 5px $gap-color;
         }
     }
 
-    &.header {
-        display: flex;
-        flex-direction: column;
-        // justify-content: space-between;
-
-        &__items {
-            background-color: red;
-            height: 33.33%;
-        }
-    }
-
-    &.section-main {
+    .section-main {
         display: flex;
         flex-direction: column;
 

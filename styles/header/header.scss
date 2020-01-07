@@ -1,0 +1,36 @@
+.header {
+    $header: '.header';
+
+    background: linear-gradient(bottom, $gradient-dark, $gradient-light);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1rem 0;
+
+    color: $font-col-dim;
+    font-size: 1.5rem;
+    text-align: center;
+
+    &__nav {
+        list-style-type: none;
+    }
+
+    &__nav-items {
+        height: 3rem;
+        line-height: 3rem;
+    }
+
+    &__items:nth-child(2) {
+        #{$header}__nav-items{
+            margin: 1.2rem auto;
+        }
+    }
+
+    &__nav-items:hover {
+        cursor: pointer;
+        border-left: 0.2rem solid $active;
+        background-color: $highlight;
+        color: $font-col-light;
+    }
+    
+}
