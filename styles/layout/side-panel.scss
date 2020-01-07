@@ -1,0 +1,14 @@
+.side-panel {
+    background: -webkit-linear-gradient(bottom, $gradient-dark, $gradient-light);
+    display: flex;
+    flex-direction: column;
+    padding: 0 $gap-size;
+
+    & > div {
+        height: 50%;
+    }
+
+    &__head {
+
+    }
+}

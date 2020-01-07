@@ -1,12 +1,10 @@
 @import "../components/card.scss";
+@import "section-header.scss";
 
-.section-main {
-    $main: '.section-main';
+.section_main {
+    $main: '.section_main';
 
-    display: flex;
-    flex-direction: column;
-
-    &__area {
+    .select-stats__area {
         &:first-child {
             height: 25%;
             display: grid;
@@ -16,36 +14,6 @@
         }
     }
 
-    @include card($main);
-
-    &__area {
-        &:nth-child(2) {
-            height: 55%;
-        }
-    }
-
-
-    &__header-2 {
-        color: $font-col-dim;
-        display: flex;
-        flex-direction: row;
-        // justify-content: space-between;
-    }
-
-    &__title-2 {
-        width: 50%;
-
-    }
-
-    // &__controls-2 {
-    // }
-
-    &__nav-2 {
-        list-style: none;
-        // width: 50%;
-    }
-
-    &__items-2 {
-        display: inline;
-    }
+    @include card('.select-stats');
+    @include header('.preview-stats');
 }
