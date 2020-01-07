@@ -26,7 +26,7 @@
         }
     }
 
-    &__nav-items:hover {
+    &__nav-items--active, &__nav-items:hover {
         cursor: pointer;
         border-left: 0.4rem solid $active;
         background-color: $highlight;

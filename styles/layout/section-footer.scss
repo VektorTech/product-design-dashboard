@@ -1,0 +1,62 @@
+@mixin footer{
+    .card-results {
+        height: 15rem;
+
+        &__scroller {
+            overflow-x: scroll;
+            overflow-y: hidden;
+            white-space: nowrap;
+            padding-left: $gap-size;
+        }
+
+        &::after{
+            content: "";
+            z-index: 1000;
+            display: block;
+            height: 12rem;
+            margin-top: -14rem;
+            float: right;
+            width: 10rem;
+            background: -webkit-linear-gradient(left, rgba(#000, 0), $standard-col2);
+        }
+
+        &__card {
+            width:21rem;
+            height:12rem;
+            display: inline-block;
+            flex-direction: column;
+            justify-content: space-evenly;
+            border-radius: 2rem;
+            background-color: rgba($highlight, 0.4);
+
+            &:nth-child(1n+2){//everything but first
+                margin-left: $gap-size;
+            }
+
+            // & > div {
+            //     height: 50%; 
+            // }
+        }
+
+        // &__top {
+        //     display: grid;
+        //     grid-template-columns: 1fr 1.5fr 1fr;
+        //     grid-template-rows: 2;
+        //     grid-template-areas: "a b d""a c d";
+        //     // grid-gap: 1rem;
+        // }
+
+        // &__top-section:nth-child(1) {
+        //     grid-area: a;
+        // }
+        // &__top-section:nth-child(2) {
+        //     grid-area: b;
+        // }
+        // &__top-section:nth-child(3) {
+        //     grid-area: c;
+        // }
+        // &__top-section:nth-child(4) {
+        //     grid-area: d;
+        // }
+    }
+}

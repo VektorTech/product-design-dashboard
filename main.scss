@@ -1,7 +1,7 @@
 @import "./styles/_globals.scss";
 @import "./styles/layout/header.scss";
-@import "./styles/layout/side-panel.scss";
 @import "./styles/layout/section-main.scss";
+@import "./styles/layout/side-panel.scss";
 
 * {
     margin: 0;
@@ -31,17 +31,6 @@ html, body {
     display: grid;
     grid-template-columns: 1.3fr 16fr 7fr;
     grid-auto-rows: 100%;
-    
-    & > div {
-        &:nth-child(2) {
-            display: flex;
-            flex-direction: column;
-            background: -webkit-linear-gradient(bottom, $standard-col, #3b4576);
-            box-shadow: 0px 0px 0.5rem $gap-color;
-            z-index: 100;
-            padding: 0 $gap-size;
-        }
-    }
 }
 
 // @media screen and (max-width: 400px){

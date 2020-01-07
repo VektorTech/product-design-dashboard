@@ -1,3 +1,5 @@
+@import "../components/button.scss";
+
 @mixin header($selector){
     #{$selector}__area {
         &:nth-child(2) {
@@ -11,6 +13,7 @@
         display: flex;
         flex-direction: row;
         justify-content: space-between;
+        white-space: nowrap;//prevents text wrap
     }
 
     #{$selector}__title {
@@ -35,8 +38,6 @@
 
     #{$selector}__nav {
         list-style: none;
-        //prevents line from breaking
-        white-space: nowrap;
     }
 
     #{$selector}__items {
@@ -55,22 +56,10 @@
         width: 15rem;
         height: 4rem;
         align-self: center;
-        
-        & button {
-            background-color: #6b75ca;
-            font-size: 1rem;
-            letter-spacing: .1rem;
-            color: #fff;
-            width: 100%;
-            height: 100%;
-            border: none;
-            border-radius: .8rem;
-            cursor: pointer;
+    }
 
-            & > i {
-               font-size: 1.3rem;
-            }
-        }
+    button {
+        @include button;
     }
 }
 
