@@ -1,0 +1,21 @@
+@import "../components/card.scss";
+
+.section-main {
+    $main: '.section-main';
+
+    display: flex;
+    flex-direction: column;
+
+    &__area {
+        &:first-child {
+            height: 26%;
+            padding: 0 2.5rem;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(3, 1fr);
+            grid-gap: 2.5rem;
+        }
+    }
+
+    @include card($main);
+}
