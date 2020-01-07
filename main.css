@@ -74,7 +74,49 @@ body {
           flex-direction: column;
 }
 
-.container .section-main__area {
-  height: 33.33%;
+.container .section-main__area:first-child {
+  height: 30%;
+  padding: 0 2rem;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+  -ms-grid-rows: (1fr)[3];
+      grid-template-rows: repeat(3, 1fr);
+  grid-gap: 2rem;
+      grid-template-areas: "a b c d" "a b c d";
+}
+
+.container .section-main__btn-cards {
+  border-radius: 0% 0% 10% 10%;
+  background-color: red;
+}
+
+.container .section-main__btn-cards:nth-child(1) {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 1;
+  grid-area: a;
+}
+
+.container .section-main__btn-cards:nth-child(2) {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 2;
+  grid-area: b;
+}
+
+.container .section-main__btn-cards:nth-child(3) {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 3;
+  grid-area: c;
+}
+
+.container .section-main__btn-cards:nth-child(4) {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 4;
+  grid-area: d;
 }
 /*# sourceMappingURL=main.css.map */

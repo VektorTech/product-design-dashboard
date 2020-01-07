@@ -30,8 +30,37 @@ body {
         flex-direction: column;
 
         &__area {
-            height: 33.33%;
+            // height: 33.33%;
+
+            &:first-child {
+                height: 30%;
+                padding: 0 2rem;
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+                grid-template-rows: repeat(3, 1fr);
+                grid-gap: 2rem;
+                grid-template-areas: 
+                "a b c d"
+                "a b c d";
+            }
         }
+        &__btn-cards {
+            border-radius: 0% 0% 10% 10%;
+            background-color: red;
+            &:nth-child(1){
+                grid-area: a;
+            }
+            &:nth-child(2){
+                grid-area: b;
+            }
+            &:nth-child(3){
+                grid-area: c;
+            }
+            &:nth-child(4){
+                grid-area: d;
+            }
+        }
+        
     }
 }
 
