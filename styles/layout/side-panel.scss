@@ -6,9 +6,38 @@
 
     & > div {
         height: 50%;
+        overflow: hidden;
     }
 
     &__head {
+        display: flex;
+        justify-content: space-between;
+        padding-top: $gap-size;
+        font-size: 1.5rem;
+        text-align: center;
 
+        i {
+            width: 2rem;
+            height: 2rem;
+            background-color: rgba($active, 0.3);
+            border-radius: .6rem;
+            cursor: pointer;
+
+            // &:hover
+        }
+    }
+
+    &__content {
+        overflow: hidden;
+        height: 100%;
+        padding-bottom: 6rem;
+    }
+
+    &__results {
+        width: 100%;
+        height: 27%;
+        border-radius: 1.6rem;
+        margin: 1.5rem 0;
+        background-color: $standard-col2;
     }
 }
