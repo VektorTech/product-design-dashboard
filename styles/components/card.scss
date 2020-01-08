@@ -46,4 +46,12 @@
             letter-spacing: .1rem;
         }
     }
+
+    @include tablet{
+        #{$selector}__card-top {
+            padding-left:.5rem;
+            padding-right:.5rem;
+            letter-spacing: 0;
+        }
+    }
 }

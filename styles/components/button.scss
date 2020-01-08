@@ -22,5 +22,13 @@
         &:hover {
             -webkit-filter: brightness(90%);
         }
+
+        @include tablet {
+            & {
+                font-size: .8rem;
+                width: 80%;
+                float: right;
+            }
+        }
     }
 }
