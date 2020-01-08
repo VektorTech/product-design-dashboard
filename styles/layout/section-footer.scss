@@ -1,55 +1,20 @@
+@import "../components/card-btn.scss";
+
 @mixin footer{
     .card-results {
         height: 15rem;
 
         &__scroller {
-            overflow-x: scroll;
+            overflow-x: hidden;
             overflow-y: hidden;
             white-space: nowrap;
             padding-left: $gap-size;
-        }
 
-        &__card {
-            width:22rem;
-            height:12rem;
-            display: inline-block;
-            flex-direction: column;
-            justify-content: space-evenly;
-            border-radius: 2rem;
-            background-color: rgba($highlight, 0.4);
-
-            &:nth-child(1n+2){//everything but first
-                margin-left: $gap-size;
-            }
-
-            & > div {
-                height: 50%; 
+            &:hover {
+                overflow-x: scroll;
             }
         }
 
-        &__top {
-            display: flex;
-            flex-direction: row;
-            justify-content: space-around;
-            align-items: center;
-            padding: 1rem 0 0 .4rem;
-
-            & h2 {
-                font-size: 1.2rem;
-            }
-        }
-
-        &__bottom {
-            padding: 1rem 0 0 2.5rem;
-        }
-        
-        &__item {
-            display: inline-block;
-            
-            & h1 {
-                letter-spacing: .2rem;
-                $font-size: .8rem;
-            }
-        }
+        @include card-btn(rgba($highlight, 0.4));
     }
 }

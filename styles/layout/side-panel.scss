@@ -1,3 +1,5 @@
+@import "./side-panel-bottom.scss";
+
 .side-panel {
     background: -webkit-linear-gradient(bottom, $gradient-dark, $gradient-light);
     display: flex;
@@ -13,6 +15,7 @@
         display: flex;
         justify-content: space-between;
         padding-top: $gap-size;
+        padding-left: .1rem;
         text-align: center;
 
         i {
@@ -36,52 +39,5 @@
     //     background: -webkit-linear-gradient(left, rgba(#000, 0), rgba($gradient-dark, 0.7));
     // }
 
-    &__content {
-        overflow: hidden;
-        height: 100%;
-        padding-bottom: 6rem;
-    }
-
-    &__results {
-        // height: 20rem;
-        border-radius: 1.6rem;
-        margin: 1.5rem 0;
-        background-color: #333c73;
-    }
-
-    &__list {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        // align-items: center;
-    }
-
-    &__item {
-        padding: 1.5rem;
-
-        & > .img {
-           width: 6rem;
-        }
-
-        & h1 {
-            font-size: 2.3rem;
-            text-align: center; 
-        }
-
-        &:first-child p {
-            font-size: 1.3rem;
-        }
-
-        .inner {
-            font-size: .8rem;
-            font-weight: 1;
-            word-spacing: .2rem;
-            background-color: $button-color;
-            border: .4rem solid $button-color;
-            border-bottom: .1rem solid $button-color;
-            border-top: .1rem solid $button-color;
-            border-radius: .3rem;
-            margin-left: -2.5rem;
-        }
-    }
+    @include bottom;
 }

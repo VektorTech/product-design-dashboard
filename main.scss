@@ -15,10 +15,19 @@ html, body {
     color: #fff;
     width: 100%;
     height: 100vh;
+    word-wrap: none;
 }
 
 ul {
     list-style-type: none;
+}
+
+.vert-center {
+    align-self: center;
+}
+
+.flex-right{
+    margin-left: auto;
 }
 
 .negative {
@@ -52,12 +61,5 @@ ul {
     grid-auto-rows: 100%;
 }
 
-.vert-center {
-    align-self: center;
-}
-
-.flex-right{
-    margin-left: auto;
-}
 // @media screen and (max-width: 400px){
 // }
