@@ -54,4 +54,34 @@
             letter-spacing: 0;
         }
     }
+
+    @include mobile{
+        #{$selector}__btn-cards {
+            height: 15vh;
+            width: 30vw;
+            display: inline-block;
+            font-size: .8rem;
+            border-radius: .8rem;
+
+            &:hover {
+                margin: 0;
+            }
+        
+            &--active, &--active:hover {
+                font-size: 1.3rem;
+                margin: 0;
+            }
+        }  
+        
+        #{$selector}__card-top {
+            & h1 {
+                letter-spacing: .2rem;
+            }
+    
+            & p {
+                color: $font-col-dim;
+                font-size: .8rem;  
+            }
+        }
+    }
 }

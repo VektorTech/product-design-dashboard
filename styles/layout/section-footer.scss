@@ -16,5 +16,17 @@
         }
 
         @include card-btn(rgba($highlight, 0.4));
+
+        @include mobile{
+            height: 32rem;
+
+            &__scroller:hover, &__scroller {
+                overflow-x: hidden;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                padding-left: 0;
+            }
+        };
     }
 }

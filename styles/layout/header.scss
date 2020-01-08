@@ -31,5 +31,22 @@
         border-left: 0.4rem solid $active;
         background-color: $highlight;
         color: $font-col-light;
-    }  
+    } 
+    
+    @include mobile{
+        display: inline;
+        position: fixed;
+        width: 100%;
+        padding: 0;
+        height: 8vh;
+
+        &__items, &__nav-items {
+            margin: 0;
+            display: inline;
+        }
+
+        &__nav {
+            height: 0;
+        }
+    };
 }

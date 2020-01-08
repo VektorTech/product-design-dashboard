@@ -55,4 +55,12 @@
             }
         }
     }
+
+    @include mobile {
+        &__card {
+            width: 43vw;
+            margin: 1rem !important;
+            border-radius: 1rem;
+        }
+    }
 }

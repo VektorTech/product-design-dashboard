@@ -10,6 +10,13 @@
     box-sizing: border-box;
 }
 
+.mdi-dots-vertical {
+    font-size: 1.4rem;
+    @include mobile{
+        font-size: 1.8rem;
+    };
+}
+
 html, body {
     font-size: 10px;
     font-family: 'Open Sans', sans-serif;
@@ -62,7 +69,7 @@ ul {
     grid-template-columns: minmax(7rem, 1.3fr) 16fr 7fr;
     grid-auto-rows: 100%;
     
-    // @include tablet{
-         
-    // };
+    @include mobile{
+        display: block;
+    };
 }

@@ -33,4 +33,15 @@
 
     @include header('.preview-stats');
     @include footer;
+
+    @include mobile{
+        padding-top: 10vh;
+
+        .select-stats__area {
+            &:first-child {
+                height: 20vh;
+            }
+           overflow-x: scroll;
+        }
+    };
 }
