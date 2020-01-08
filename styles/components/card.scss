@@ -13,21 +13,20 @@
         }
     
         &--active, &--active:hover {
-            font-size: 1.5rem;
+            font-size: 1.3rem;
             margin: 0 -1rem;
             grid-row-end: 4;
             background-color: $active;
 
             #{$selector}__card-top > p {
                 color: #fff;
-                font-size: 1.1rem;  
+                font-size: 1rem;  
             }
         }
     }
 
     #{$selector}__card-top {
         padding: 1.5rem 0 0 2rem;
-        text-transform: uppercase;
 
         & h1 {
             letter-spacing: .2rem;

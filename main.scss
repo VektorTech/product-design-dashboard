@@ -17,12 +17,31 @@ html, body {
     height: 100vh;
 }
 
+ul {
+    list-style-type: none;
+}
+
 .negative {
     color: #cb474c;
 }
 
 .positive {
     color: #37d16a;
+}
+
+.dim {
+    color: $font-col-dim;
+}
+
+.caps {
+    text-transform: uppercase;
+}
+
+.title {
+    color: #fff;
+    font-size: 1.6rem;
+    white-space: nowrap;
+    letter-spacing: 0.1rem;
 }
 
 .container {
