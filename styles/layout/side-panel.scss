@@ -40,4 +40,10 @@
     // }
 
     @include bottom;
+
+    @include mobile {
+        &__head {
+            padding-top: 0;
+        }
+    }
 }

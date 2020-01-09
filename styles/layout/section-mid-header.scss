@@ -67,4 +67,10 @@
             padding: 0 .2rem;
         }
     }
+
+    @include mobile {
+        #{$selector}__header {
+            padding-top: 0;
+        }
+    }
 }

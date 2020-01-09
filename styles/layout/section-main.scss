@@ -21,13 +21,12 @@
     }
 
     .select-stats__area {
-        &:first-child {
-            height: 25%;
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            grid-template-rows: repeat(3, 1fr);
-            grid-gap: $gap_size;
-        }
+        height: 22%;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        grid-gap: $gap_size;
+
         @include card('.select-stats');
     }
 
@@ -38,10 +37,8 @@
         padding-top: 10vh;
 
         .select-stats__area {
-            &:first-child {
-                height: 20vh;
-            }
-           overflow-x: scroll;
+            height: 18vh;
+            overflow-x: scroll;
         }
     };
 }
