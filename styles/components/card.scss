@@ -55,35 +55,39 @@
         }
     }
 
-    @include mobile{
+    @include mobile{        
         #{$selector}__btn-cards {
             height: 15vh;
             width: 35vw;
             display: inline-block;
             font-size: .8rem;
             border-radius: .8rem;
-            margin-right: -2rem;
+            // margin-right: 0 -2rem !important;
 
             &:hover {
-                margin: 0;
-                margin-right: -2rem;
-            }
-        
-            &--active, &--active:hover {
-                margin-right: -2rem !important;
+                border-radius: .8rem;
                 font-size: 1rem;
                 margin: 0;
             }
         }  
+
+        #{$selector}__btn-cards--active {
+            margin: 0;
+            background-color: $standard-col2;
+            & #{$selector}__card-top p, &:hover #{$selector}__card-top p {
+                color: $font-col-dim;
+                font-size: .8rem; 
+            }
+        }
         
-        #{$selector}__card-top, #{$selector}__btn-cards--active #{$selector}__card-top {
+        #{$selector}__card-top, #{$selector}__card-top {
             & h1 {
                 letter-spacing: .2rem;
             }
     
             & p {
                 color: $font-col-dim;
-                font-size: .7rem; 
+                font-size: .8rem; 
             }
         }
     }

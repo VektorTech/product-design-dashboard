@@ -25,6 +25,24 @@ html, body {
     height: 100vh;
     word-wrap: none;
     white-space: nowrap;
+
+    ::-webkit-scrollbar-track
+    {
+        border-radius: 10px;
+        background-color: $gradient-light;
+    }
+    ::-webkit-scrollbar
+    {
+        width: .5rem;
+        height: .5rem;
+        background-color: rgba(#000, 0);
+    }
+    ::-webkit-scrollbar-thumb
+    {
+        border-radius: 10px;
+        -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+        background-color: $standard-col;
+    }
 }
 
 ul {
@@ -71,9 +89,13 @@ ul {
 }
 
 @include mobile{
+    html, body {
+        background: -webkit-linear-gradient(bottom, $gradient-dark, $gradient-light);
+        height: auto;
+    }
+
     .container {
         display: block;
-        background: -webkit-linear-gradient(bottom, $gradient-dark, $gradient-light);
     }
 
     .hide-resp {

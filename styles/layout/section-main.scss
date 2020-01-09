@@ -39,8 +39,12 @@
         padding-top: 10vh;
 
         .select-stats__area {
-            height: 18vh;
-            overflow-x: scroll;
+            height: 16vh;
+            overflow-x: hidden;
+            &:hover{
+                overflow-x: scroll;
+            }
+            grid-gap: $gap_size-m;
         }
 
         & > div {
