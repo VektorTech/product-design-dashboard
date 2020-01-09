@@ -1,5 +1,11 @@
 @import "../components/button.scss";
 
+@mixin thin-border {
+    color: #fff;
+    border: .12rem solid #fff;
+    border-radius: .5rem;
+}
+
 @mixin header($selector){
     #{$selector}__area {
         &:nth-child(2) {
@@ -41,9 +47,7 @@
         line-height: 2.2rem;
 
         &--active {
-            color: #fff;
-            border: .12rem solid #fff;
-            border-radius: .5rem;
+            @include thin-border;
         }
     }
 
@@ -71,6 +75,36 @@
     @include mobile {
         #{$selector}__header {
             padding-top: 0;
+        }
+
+        #{$selector}__controls {
+            align-self: flex-start;
+        }
+
+        #{$selector}__nav {
+            margin-top: 1rem;
+            position: absolute;
+            background-color: $standard-col2;
+            border-radius: .8rem;
+
+
+
+            &:active, &:hover {
+                box-shadow: .1rem .1rem .3rem $gap-color;
+                #{$selector}__items {
+                    display: block;
+                }
+            }
+        }
+
+        #{$selector}__items {
+            display: none;
+            &:hover {
+                @include thin-border;
+            }
+            &--active{
+                display: block;
+            }
         }
     }
 }

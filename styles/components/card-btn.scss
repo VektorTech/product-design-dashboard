@@ -33,12 +33,11 @@
         padding: 1rem 0 0 2.5rem;
     }
     
-    &__item {
+    &__bottom-item {
         display: inline-block;
         
         & h1 {
             letter-spacing: .2rem;
-            $font-size: .8rem;
         }
     }
 
@@ -58,9 +57,21 @@
 
     @include mobile {
         &__card {
-            width: 40vw;
-            margin: 1.5rem 0rem !important;
+            width: 45vw;
+            margin: $gap-size-m 0rem !important;
             border-radius: 1rem;
+        }
+
+        &__top {
+            padding: .7rem 0 0 .2rem;
+    
+            & h2 {
+                font-size: .8rem;
+            }
+        }
+
+        &__bottom-item h1 {
+            font-size: 1.2rem;
         }
     }
 }

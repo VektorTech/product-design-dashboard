@@ -38,10 +38,14 @@
     //     height: 100vh;
     //     background: -webkit-linear-gradient(left, rgba(#000, 0), rgba($gradient-dark, 0.7));
     // }
-
-    @include bottom;
+    
+    &__bottom {
+        @include bottom('.side-panel');
+    }
 
     @include mobile {
+        padding: 0 $gap-size-m;
+        background: none;
         &__head {
             padding-top: 0;
         }

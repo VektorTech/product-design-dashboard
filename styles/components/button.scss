@@ -24,11 +24,14 @@
         }
 
         @include tablet {
-            & {
-                font-size: .8rem;
-                width: 80%;
-                float: right;
-            }
+            font-size: .8rem;
+            width: 80%;
+            float: right;
+        }
+
+        @include mobile {
+            width: 50%;
+            float: right;
         }
     }
 }

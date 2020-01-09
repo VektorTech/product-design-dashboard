@@ -1,23 +1,29 @@
-@mixin bottom {    
-    &__content {
+@mixin bottom($selector) {    
+    #{$selector}__content {
         overflow: hidden;
         height: 100%;
         padding-bottom: 6rem;
     }
 
-    &__results {
+    #{$selector}__results {
         border-radius: 1.6rem;
         margin: 1.5rem 0;
         background-color: #333c73;
     }
 
-    &__list {
+    #{$selector}__list {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
     }
 
-    &__item {
+    @include mobile {
+        #{$selector}__content {
+            padding-bottom: 0;
+        }
+    }
+
+    #{$selector}__item {
         padding: 1.5rem;
 
         & > .img {

@@ -68,8 +68,15 @@ ul {
     display: grid;
     grid-template-columns: minmax(7rem, 1.3fr) 16fr 7fr;
     grid-auto-rows: 100%;
-    
-    @include mobile{
-        display: block;
-    };
 }
+
+@include mobile{
+    .container {
+        display: block;
+        background: -webkit-linear-gradient(bottom, $gradient-dark, $gradient-light);
+    }
+
+    .hide-resp {
+        display: none;
+    }
+};

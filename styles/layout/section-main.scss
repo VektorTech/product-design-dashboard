@@ -34,11 +34,17 @@
     @include footer;
 
     @include mobile{
+        background: none;
+        box-shadow: none;
         padding-top: 10vh;
 
         .select-stats__area {
             height: 18vh;
             overflow-x: scroll;
+        }
+
+        & > div {
+            padding: 0 $gap-size-m;
         }
     };
 }
