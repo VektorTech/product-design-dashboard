@@ -55,9 +55,11 @@
         }
     }
 
-    @include mobile{        
+    @include mobile{
+        margin-bottom: 2rem;
+        
         #{$selector}__btn-cards {
-            height: 15vh;
+            height: 10rem;
             width: 35vw;
             display: inline-block;
             font-size: .8rem;

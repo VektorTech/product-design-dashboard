@@ -90,7 +90,7 @@ ul {
 
 @include mobile{
     html, body {
-        background: -webkit-linear-gradient(bottom, $gradient-dark, $gradient-light);
+        background: -webkit-linear-gradient(bottom, $gradient-darker, $gradient-mid);
         height: auto;
     }
 

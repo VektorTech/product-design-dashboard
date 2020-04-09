@@ -36,20 +36,44 @@
     @include mobile{
         background: $standard-col;
         z-index: 1000;
-        display: inline;
+        flex-direction: row;
+        justify-content: space-evenly;
         position: fixed;
         width: 100%;
         padding: 0;
-        height: 8vh;
+        height: 5rem;
         box-shadow: 0 .05rem .5rem .02rem #111;
 
+        &__items {
+            width: 100%;
+            line-height: 5rem;
+        }
+
+        &__items:nth-child(2n-1) {
+            display: none;
+        }
+
         &__items, &__nav-items {
-            margin: 0;
+            background: none;
             display: inline;
         }
 
         &__nav {
             height: 0;
         }
+
+        &__nav-items {
+            padding: 0 5%;
+
+            &:hover {
+                background-color: transparent;
+            }
+        }
+
+        &__nav-items--active, &__nav-items:hover {
+            border-left: none;
+            background-color: none;
+            // color: $font-col-light;
+        } 
     };
 }
